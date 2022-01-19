@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&family=Shrikhand&display=swap");
+.btn-cta {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 45px;
+  color: #fff;
+  background: linear-gradient(160deg, #FF79DA 0%, #9356DC 180%);
+}
+/*# sourceMappingURL=main.css.map */
