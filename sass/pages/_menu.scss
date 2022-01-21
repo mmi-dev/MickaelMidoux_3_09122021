@@ -1,0 +1,13 @@
+.return{
+    position:absolute;
+    left: 25px;
+    font-size: 1.2em;
+}
+.image{
+    width: 100%;
+    height: 270px;
+    & .menu-img{
+    width: 100%;
+    object-position: top;
+    }
+}

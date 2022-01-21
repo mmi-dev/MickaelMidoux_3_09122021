@@ -1,0 +1,31 @@
+//loader
+
+.loader{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $color-secondary;
+    animation: loader-show 1s linear;
+    opacity:0%;
+    z-index: -10;
+}
+
+@keyframes loader-show {
+    0%{
+        opacity: 100%;
+        z-index: 10;
+    }
+    95%{
+        opacity: 100%;
+        z-index: 10;
+    }
+    100%{
+        opacity: 0%;
+        z-index: -10;
+    }
+}

@@ -10,22 +10,27 @@
 
 //base
 @import
-  'base/reset',
-  'base/typography';
+'base/reset',
+'base/typography',
+'base/base';
 
 //layout
 @import
   'layout/navbar',
   'layout/header',
+  'layout/main',
   'layout/footer';
 
 //components
 @import
-  'components/buttons',
-  'components/inputs';
+'components/card',
+'components/buttons',
+'components/loader',
+'components/inputs';
 
 //pages
-
+@import
+'pages/menu';
 
 //themes
 @import
