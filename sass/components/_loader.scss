@@ -10,7 +10,7 @@
     width: 100vw;
     height: 100vh;
     background: rgba(lighten($color-secondary, 20%), .8);
-    animation: loader-show 4s linear;
+    animation: loader-show 3s linear;
     opacity:0%;
     z-index: -10;
     & .loader__animation {

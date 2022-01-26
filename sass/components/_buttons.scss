@@ -1,10 +1,18 @@
 //This file you will create your style for buttons inside of the project
 .btn-cta{
+    position: relative;
     font-weight: 400;
     height: 50px;
     border-radius: 25px;
     padding: 0 25px;
     color:#fff;
-    background: linear-gradient(180deg, $color-secondary -20%, $color-primary 120%);
+    background: linear-gradient(180deg, $color-secondary 20%, $color-primary 120%);
     box-shadow: 0 3px 6px lighten(black, 70%);
+    overflow: hidden;
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(180deg, lighten($color-secondary,3%) -20%, lighten($color-primary,3%) 120%);
+        box-shadow: 0 3px 10px lighten(black, 65%);
+
+    }
 }

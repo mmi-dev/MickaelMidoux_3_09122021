@@ -38,6 +38,9 @@
         width:100%;
         overflow:hidden;
         box-shadow: 0 4px 10px lighten(black, 85%);
+        &:hover{
+            box-shadow: 0 4px 15px lighten(black, 75%);
+        }
     }
     &__img{
         width:100%;

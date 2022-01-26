@@ -9,16 +9,25 @@
     color:#ffffff;
     &__title{
         font-family: 'Shrikhand', sans-serif;
-        font-size: 1em;
+        font-size: 1.05em;
     }
     &__list{
 
     }
     &__list-item{
+      font-size: .9em;
         font-weight: 300;
+        margin: 10px 0;
+        & i{
+          width: 12px;
+          height:12Px;
+          font-size: .85em;
+          text-align: center;
+          margin-right: 10px;
+        }
     }
     &__list-item-main{
-      font-weight:500;  
+      font-weight:400;  
     }
 
     &__link{

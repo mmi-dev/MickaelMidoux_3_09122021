@@ -37,7 +37,7 @@
     }
     &__title{
         font-family: 'Shrikhand', sans-serif;
-        font-size: 1.7em;
+        font-size: 1.65em;
         margin:0;
     }
     &__cards{
@@ -91,11 +91,16 @@
         height:70px;
         border-radius:20px;
         overflow: hidden;
+        cursor: pointer;
         box-shadow: 0 4px 10px lighten(black, 85%);
         
         transform: translatey(20px);
         opacity: 0;
         animation: 01s fadein ease-out forwards, 1s translate-up ease-out forwards;
+
+        &:hover{
+            box-shadow: 0 4px 13px lighten(black, 75%);
+        }
     }
     &__text{
         display:flex;
