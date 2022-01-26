@@ -1,1 +1,27 @@
 //This file is for create your style with relation on space of footer
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background: $color-darkgrey;
+    color:#ffffff;
+    &__title{
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1em;
+    }
+    &__list{
+
+    }
+    &__list-item{
+        font-weight: 300;
+    }
+    &__list-item-main{
+      font-weight:500;  
+    }
+
+    &__link{
+      color:#fff;
+    }
+}

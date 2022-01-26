@@ -1,0 +1,217 @@
+.return{
+    position:absolute;
+    left: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.image{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    z-index: -1;
+    & .menu-img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: top;
+    }
+}
+
+.menu{
+    display:flex;
+    flex-flow:column nowrap;
+    width: 100%;
+    background: $color-lightgrey;
+    border-radius: 35px;
+    padding: 40px 20px;
+    gap:30px;
+    &__title-bloc{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+    &__title{
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.7em;
+        margin:0;
+    }
+    &__cards{
+        display:flex;
+        flex-flow:column nowrap;
+        gap:15px;
+    }
+    &__btn{
+        // width: 185px;
+        padding: 0 50px;
+        // align-self: center;
+        margin:15px auto;
+    }
+}
+
+.menu-card{
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    &__title:after{
+        display: block;
+        content:'';
+        position: absolute;
+        bottom: -10px;
+        width: 40px;
+        height: 3px;
+        background: $color-tertiary;
+    }
+    &__title{
+        position: relative;
+        font-size: 1.0em;
+        font-weight: 200;
+        text-transform: uppercase;
+
+        opacity: 0;
+        animation: 0.5s fadein forwards;
+    }
+    & ul{
+        // remplacer plar la class: .menu-card__list
+        display:flex;
+        flex-flow:column nowrap;
+        gap:15px;
+    }
+    &__item{
+        display:flex;
+        background:white;
+        width:100%;
+        height:70px;
+        border-radius:20px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px lighten(black, 85%);
+        
+        transform: translatey(20px);
+        opacity: 0;
+        animation: 01s fadein ease-out forwards, 1s translate-up ease-out forwards;
+    }
+    &__text{
+        display:flex;
+        position:relative;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        height:100%;
+        padding:15px 0 10px 15px;
+        flex:1;
+    }
+    &__name{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1.1em;
+        margin:0;
+        font-weight: 500;
+    }
+    &__description{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: bottom;
+        font-weight: 300;
+    }
+    &__price{
+        display:flex;
+        align-items: end;
+        justify-content:flex-end;
+        height:100%;
+        padding:10px;
+        width:60px;
+        font-size:.95em;
+        font-weight: 500;
+    }
+    &__check{
+        height:100%;
+        background:$color-tertiary;
+        width:0px;
+        transition: .5s;
+        margin-left: 15px;
+        & i{
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            height: 100%;
+            width:60px;
+            font-size:20px;
+            transition: .5s;
+            transform: rotate(-360deg);
+            color:white;
+        }
+    }
+}
+
+/*animation item*/
+
+.menu-card__item:hover .menu-card__check{
+    width:60px;
+    margin-left: 0px;
+    & i{
+        transform: rotate(0deg);
+    }
+  }
+  
+/*Animation list*/
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes translate-up {
+    0% {
+      transform: translatey(20px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+  .menu-card:nth-of-type(1) h2 {
+    animation-delay: 0.2s;
+  }
+  .menu-card:nth-of-type(1) li:nth-of-type(1) {
+    animation-delay: 0.5s, 0.5s;
+  }
+  .menu-card:nth-of-type(1) li:nth-of-type(2) {
+    animation-delay: 0.7s, 0.7s;
+  }
+  .menu-card:nth-of-type(1) li:nth-of-type(3) {
+    animation-delay: 0.9s, 0.9s;
+  }
+  .menu-card:nth-of-type(2) h2 {
+    animation-delay: 1s;
+  }
+  .menu-card:nth-of-type(2) li:nth-of-type(1) {
+    animation-delay: 1.3s, 1.3s;
+  }
+  .menu-card:nth-of-type(2) li:nth-of-type(2) {
+    animation-delay: 1.5s, 1.5s;
+  }
+  .menu-card:nth-of-type(2) li:nth-of-type(3) {
+    animation-delay: 1.7s, 1.7s;
+  }
+  .menu-card:nth-of-type(3) h2 {
+    animation-delay: 1.8s;
+  }
+  .menu-card:nth-of-type(3) li:nth-of-type(1) {
+    animation-delay: 2.1s, 2.1s;
+  }
+  .menu-card:nth-of-type(3) li:nth-of-type(2) {
+    animation-delay: 2.3s, 2.3s;
+  }
+  .menu-card:nth-of-type(3) li:nth-of-type(3) {
+    animation-delay: 2.5s, 2.5s;
+  }
