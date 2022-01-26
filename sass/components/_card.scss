@@ -58,10 +58,11 @@
         font-weight: 300;
         font-size: 1.08em;
     }
-    &__heart{
+    & .heart{
         font-size:26px;
         position: absolute;
         right:30px;
         bottom: calc(50% - 10px);
+        bottom: 33px;
     }
 }
