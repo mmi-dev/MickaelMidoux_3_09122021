@@ -714,8 +714,8 @@ header {
   border-radius: 25px;
   padding: 0 25px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #FF79DA), color-stop(120%, #9356DC));
-  background: linear-gradient(180deg, #FF79DA 20%, #9356DC 120%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-20%, #FF79DA), color-stop(120%, #9356DC));
+  background: linear-gradient(180deg, #FF79DA -20%, #9356DC 120%);
   -webkit-box-shadow: 0 3px 6px #b3b3b3;
           box-shadow: 0 3px 6px #b3b3b3;
   overflow: hidden;
