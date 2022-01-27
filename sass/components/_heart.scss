@@ -1,3 +1,5 @@
+/* heart css */
+
 .heart{
     position: relative;
     display:flex;
@@ -12,19 +14,15 @@
     position: absolute;
     display:flex;
     justify-content:center;
-    align-items:end;
+    align-items:center;
     height: 100%;
     width: 100%; 
   }
  &__base{
     font-size:26px;
     line-height:26px;
-    /*left:50%;*/
-    bottom:0px;
   }
   &__hover{
-    /*left:50%;*/
-    bottom:4px;
     font-size:0px;
     line-height:0px;
     background: linear-gradient(180deg, $color-primary -20%, $color-secondary 120%);
@@ -32,11 +30,25 @@
             background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all .5s;
+    &:hover{ // hover effect
+      font-size:26px;
+      line-height:100%;
+    }
   }
 }
 
-.heart:hover .heart__hover{
-    font-size:26px;
-    line-height:100%;
+/* add class heart-bottom to the heart div to change hover effet from center onset to bottom onset -> example on menu4.html */
+.heart-bottom{
+  & .heart-icon{
+    align-items:end;
+  }
+  & .heart__base{
     bottom:0px;
   }
+  & .heart__hover{
+    bottom:4px;
+    &:hover{
+      bottom:0px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-//loader
+/* loader css */
 
 .loader{
     position: fixed;
@@ -10,10 +10,11 @@
     width: 100vw;
     height: 100vh;
     background: rgba(lighten($color-secondary, 20%), .8);
-    animation: loader-show 3s linear;
     opacity:0%;
     z-index: -10;
-    & .loader__animation {
+    -webkit-animation: loader-show 3s linear;
+            animation: loader-show 3s linear; // loader timeout
+    & .loader__animation { // animated elements
         font-family: "Shrikhand", sans-serif;
         font-size: 3em;
         color: $color-primary;
@@ -23,62 +24,7 @@
         justify-content: center;
         height: 100%;
         transform: scale(1);
+        @include loader-animation; // text animation
       }
 }
-.loader__animation{
-& span {
-    animation: 0.9s wave ease-in-out infinite;
-  }
-  
- & span:nth-of-type(1) {
-    animation-delay: 0s;
-  }
- & span:nth-of-type(2) {
-    animation-delay: 0.1s;
-  }
- & span:nth-of-type(3) {
-    animation-delay: 0.2s;
-  }
- & span:nth-of-type(4) {
-    animation-delay: 0.3s;
-  }
- & span:nth-of-type(5) {
-    animation-delay: 0.4s;
-  }
- & span:nth-of-type(6) {
-    animation-delay: 0.5s;
-  }
- & span:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
- & span:nth-of-type(8) {
-    animation-delay: 0.7s;
-  }
-}
-  @keyframes wave {
-    0% {
-      transform: scale(1);
-    }
-    15% {
-      transform: scale(1.3);
-    }
-    20% {
-      transform: scale(1);
-    }
-  }
-  
 
-@keyframes loader-show {
-    0%{
-        opacity: 100%;
-        z-index: 10;
-    }
-    95%{
-        opacity: 100%;
-        z-index: 10;
-    }
-    100%{
-        opacity: 0%;
-        z-index: -10;
-    }
-}

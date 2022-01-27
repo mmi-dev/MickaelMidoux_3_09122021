@@ -1,3 +1,5 @@
+/* header css */
+
 header{
     display:flex;
     position: relative;
@@ -8,6 +10,7 @@ header{
     box-shadow: 0px 0px 5px lighten(black, 70%);
     z-index: 3;
 }
+
 .logo{
     &__img{
         height:30px;

@@ -1,12 +1,12 @@
+//vendords
+@import
+  'vendors/normalize';
+
 //utils
 @import
   'utils/variables',
-  'utils/functions',
+  'utils/animations',
   'utils/mixins';
-
-  //vendords
-@import
-  'vendors/normalize';
 
 //base
 @import
@@ -16,9 +16,7 @@
 
 //layout
 @import
-  'layout/navbar',
   'layout/header',
-  'layout/main',
   'layout/footer';
 
 //components
@@ -26,14 +24,9 @@
 'components/card',
 'components/buttons',
 'components/heart',
-'components/loader',
-'components/inputs';
+'components/loader';
 
 //pages
 @import
 'pages/home',
 'pages/menu';
-
-//themes
-@import
-  'themes/default';
