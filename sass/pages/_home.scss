@@ -1,0 +1,120 @@
+/* home page css */
+
+/* section "location" */
+.location{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    z-index: 1;
+    &__city{
+        display:flex;
+        position: relative;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:50px;
+        background: $color-softgrey;
+        & span{
+            position: relative;
+            margin: auto;
+        }
+        & i{
+            position: absolute;
+            left: -30px;
+            height:18px;
+        }
+    }
+    &__text{
+        display:flex;
+        flex-direction:column;
+        padding:40px;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        background: $color-lightgrey;
+    }
+    &__title{
+        font-size:1.55em;
+        font-weight:500;
+        text-align:center;
+        width: 250px;
+        margin: 0;
+    }
+    &__description{
+        font-size:1.15em;
+        font-weight:200;
+        text-align:center;
+        width: 320px;
+        margin: 15px 0;
+    }
+    &__btn{
+        display: block;
+        margin: auto;
+        margin: 15px 0;
+    }
+}
+
+/* section "notice" */
+.notice{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 20px;
+    &__title{
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+    &__list{
+        display:flex;
+        flex-direction: column;
+        gap:25px;
+    }
+    &__item{
+        display:flex;
+        position: relative;
+        align-items:center;
+        width:auto;
+        background: $color-lightgrey;
+        cursor: pointer;
+        border-radius: 15px;
+        height: 75px;
+        margin-left:13PX;
+        box-shadow: 0 4px 10px lighten(black, 85%);
+        &:hover{ //hover effect
+            background: #f5edff;
+            background: lighten($color-primary, 36%);
+            & i{
+                color: $color-primary;
+            }
+        }
+    }
+    &__no{
+        font-weight: 300;
+        font-size: .9em;
+        position: absolute;
+        left: -13px;
+        display: inline;
+        background: $color-primary;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+    }
+    &__icon{
+        width: 20px;
+        font-size: 1.2em;
+        margin: 0 20px 0 30px;
+        text-align: center;
+        vertical-align: middle;
+        color: $color-grey;
+    }
+    &__text{
+        font-weight: 400;
+    }
+}

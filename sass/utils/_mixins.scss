@@ -1,1 +1,31 @@
-//This file you will create your mixins inside of the project
+/* mixin css */
+
+/* text loader animation */
+@mixin loader-animation {
+    & span {
+      -webkit-animation: 0.9s wave ease-in-out infinite;
+              animation: 0.9s wave ease-in-out infinite;
+    }
+    @for $i from 1 through 8 {  // number of characters
+        & span:nth-of-type(#{$i}) {
+            -webkit-animation-delay: $i*0.1s - 0.1s;
+                    animation-delay: $i*0.1s - 0.1s;
+      }
+    }
+  }
+
+/* menu list animation  */
+@mixin menu-animation { // animation offset for each item
+    @for $i from 1 through 3 {  // number of menu groups > (entrées, plats, desserts)
+        &:nth-of-type(#{$i}) h2  {
+            -webkit-animation-delay: ($i - 1)*0.8s + 0.2s;
+                    animation-delay: ($i - 1)*0.8s + 0.2s;
+        }
+        @for $j from 1 through 4 {  //
+            &:nth-of-type(#{$i}) li:nth-of-type(#{$j})  {
+                -webkit-animation-delay: 0.3s + ($i - 1)*0.8s + ($j)*0.2s;
+                        animation-delay: 0.3s + ($i - 1)*0.8s + ($j)*0.2s;
+            }
+        }
+    }
+}

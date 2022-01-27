@@ -1,4 +1,6 @@
-//This file you will create your style for buttons inside of the project
+/* button css */
+
+/* call to action button */
 .btn-cta{
     position: relative;
     font-weight: 400;
@@ -10,9 +12,8 @@
     box-shadow: 0 3px 6px lighten(black, 70%);
     overflow: hidden;
     cursor: pointer;
-    &:hover{
+    &:hover{ // hover effect
         background: linear-gradient(180deg, lighten($color-secondary,3%) -20%, lighten($color-primary,3%) 120%);
         box-shadow: 0 3px 10px lighten(black, 65%);
-
     }
 }

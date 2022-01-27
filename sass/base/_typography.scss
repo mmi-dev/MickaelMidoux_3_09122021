@@ -1,3 +1,14 @@
-//fonts
+/*typo css */
+
+/* import font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap');
-@import url('https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css');
+
+/* import fontawesone for icons */
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+/* basic fonts */
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: black;
+}

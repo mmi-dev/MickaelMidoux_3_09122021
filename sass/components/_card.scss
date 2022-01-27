@@ -1,5 +1,6 @@
-//cards
+/* cards css */
 
+/* restaurants presentation's cards */
 .card{
     display:flex;
     flex-direction:column;
@@ -8,7 +9,7 @@
     overflow:hidden;
     padding: 55px 20px;
     background:$color-lightgrey;
-    &__new:before{
+    &__new:before{ // "new" sticker' card if .card__new class apply on the element
         position:absolute;
         font-size:.8em;
         top:13px;
@@ -38,14 +39,15 @@
         width:100%;
         overflow:hidden;
         box-shadow: 0 4px 10px lighten(black, 85%);
-        &:hover{
+        &:hover{ // hover effect
             box-shadow: 0 4px 15px lighten(black, 75%);
         }
     }
     &__img{
         width:100%;
         height: 175px;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     &__text{
         position:relative;
@@ -54,8 +56,10 @@
     }
     &__name{
         font-size: 1.12em;
-        margin-block-start:0;
-        margin-block-end:0.4em;
+        -webkit-margin-before:0;
+                margin-block-start:0;
+        -webkit-margin-after:0.4em;
+                margin-block-end:0.4em;
     }
     &__location{
         font-weight: 300;
