@@ -722,8 +722,9 @@ header {
 }
 
 .heart__hover {
-  font-size: 0px;
-  line-height: 0px;
+  display: block;
+  font-size: 26px;
+  line-height: 26px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-20%, #9356DC), color-stop(120%, #FF79DA));
   background: linear-gradient(180deg, #9356DC -20%, #FF79DA 120%);
   -webkit-background-clip: text;
@@ -731,30 +732,24 @@ header {
   -webkit-text-fill-color: transparent;
   -webkit-transition: all .5s;
   transition: all .5s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 2;
 }
 
-.heart__hover:hover {
+.heart:hover .heart__hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
   font-size: 26px;
   line-height: 100%;
 }
 
 /* add class heart-bottom to the heart div to change hover effet from center onset to bottom onset -> example on menu4.html */
-.heart-bottom .heart-icon {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-}
-
-.heart-bottom .heart__base {
-  bottom: 0px;
-}
-
 .heart-bottom .heart__hover {
-  bottom: 4px;
-}
-
-.heart-bottom .heart__hover:hover {
-  bottom: 0px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 /* loader css */
