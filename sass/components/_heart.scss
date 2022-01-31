@@ -44,17 +44,8 @@
 
 /* add class heart-bottom to the heart div to change hover effet from center onset to bottom onset -> example on menu4.html */
 .heart-bottom{
-  // & .heart-icon{
-  //   align-items:end;
-  // }
-  // & .heart__base{
-  //   bottom:0px;
-  // }
+
   & .heart__hover{
     transform-origin: bottom;
-    // bottom:4px;
-    // &:hover{
-    //   bottom:0px;
-    // }
   }
 }

@@ -22,13 +22,29 @@
         z-index: 5;
     }
     &__title{
+        font-size: 1.5em;
         font-weight:500;
-        margin: 0 0 20px 0
+        margin: 0 0 20px 0;
+        // Desktop mode
+        @media (min-width: 993px){
+            max-width:1200px;
+            margin: 0 auto 20px auto;
+        }
     }
     &__list{
-        display:flex;
-        flex-direction:column;
+        display:grid;
+        grid-template-columns: 1fr;
         gap: 18px;
+        // tablet mode
+        @media (min-width: 769px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        // Desktop mode
+        @media (min-width: 993px){
+            max-width:1200px;
+            margin: 0 auto;
+        }
     }
     &__resto{
         display:flex;
