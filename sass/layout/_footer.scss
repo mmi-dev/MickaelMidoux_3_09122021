@@ -2,16 +2,30 @@
 
 .footer{
     display: flex;
+    position:relative;
     flex-direction: column;
     width: 100%;
     padding: 20px;
     background: $color-darkgrey;
     color:white;
+    margin-top: auto;
     &__title{
         font-family: 'Shrikhand', sans-serif;
         font-size: 1.05em;
-    }
-    &__list-item{
+        // tablet mode
+        @media (min-width: 769px) {
+          text-align: center;
+        }
+      }
+      &__list{
+        // tablet mode
+        @media (min-width: 769px) {
+          margin: 0 auto;
+          columns: 2;
+          padding: 10px 0;
+        }
+      }
+      &__list-item{
       font-size: .9em;
         font-weight: 300;
         margin: 10px 0;
@@ -21,6 +35,10 @@
           font-size: .85em;
           text-align: center;
           margin-right: 10px;
+        }
+        // tablet mode
+        @media (min-width: 769px) {
+          margin: 0 0 10px 40px;
         }
     }
     &__list-item-main{
