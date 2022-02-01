@@ -2,12 +2,12 @@
 
 /* text loader animation */
 @mixin loader-animation {
-    & span {
+    & div {
       -webkit-animation: 0.9s wave ease-in-out infinite;
               animation: 0.9s wave ease-in-out infinite;
     }
     @for $i from 1 through 8 {  // number of characters
-        & span:nth-of-type(#{$i}) {
+        & div:nth-of-type(#{$i}) {
             -webkit-animation-delay: $i*0.1s - 0.1s;
                     animation-delay: $i*0.1s - 0.1s;
       }
